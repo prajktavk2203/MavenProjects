@@ -17,8 +17,8 @@ public class GetJWKDetails
 		   .get("https://auth-api.authqapoc.aws.greenwayhealth.com/oauth2/jwks")
 		 .then()
 		    .statusCode(200)
-		    .assertThat().body("alg",equalTo("RS256"))
 		    .header("Content-Type","application/json; charset=utf-8");
+		
 	}
 
 	private ResponseAwareMatcher<Response> equalTo(String string) {
